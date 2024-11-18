@@ -5,8 +5,8 @@ import moment from "moment";
 const UserInfo = ({ openId, index, setOpenId, question, answer }) => {
   const currentUser = JSON.parse(localStorage.getItem("user"));
   return (
-    <div className="w-full  flex items-cente justify-between">
-      <div className="w-[48%] md:max-w-screen-md posted-by flex items-center gap-2 md:gap-3">
+    <div className="w-full flex items-cente justify-between gap-1">
+      <div className="posted-by flex items-center gap-2 md:gap-3">
         <img
           src={
             question?.author?.profileImage ||
@@ -17,8 +17,8 @@ const UserInfo = ({ openId, index, setOpenId, question, answer }) => {
           className="h-5 md:w-6 w-5 md:h-6 rounded-full"
         />
         <h2 className="text-gray-300 text-xs">
-          {answer ? "answered by\n" : "posted by "}{" "}
-          <span className="text-primary font-bold  md:text-sm">
+          {answer ? "Answered by\n" : "Posted by "}{" "}
+          <span className="text-primary font-bold  md:text-xs">
             {question
               ? question?.author?.name === currentUser?.name
                 ? question?.author?.name + " (You)"
@@ -32,11 +32,11 @@ const UserInfo = ({ openId, index, setOpenId, question, answer }) => {
         </h2>
       </div>
       <div className="posted-on mx-auto">
-        <h2 className="text-gray-300 text-xs">
+        <p className="text-gray-300 text-xs m-0">
           {question
             ? moment(question?.createdAt).fromNow()
             : moment(answer?.createdAt).fromNow()}
-        </h2>
+        </p>
       </div>
       {openId && (
         <div

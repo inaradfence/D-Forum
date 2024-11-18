@@ -94,7 +94,7 @@ const Layout = () => {
                         alt="profile"
                         className="w-6 h-6 rounded-full mr-2"
                       />
-                      <h3 className="text-xs">{user.name}</h3>
+                      <h3 className="text-xs text-primary">{user.name}</h3>
                     </div>
                   );
                 })}

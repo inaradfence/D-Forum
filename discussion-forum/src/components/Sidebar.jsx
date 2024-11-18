@@ -9,7 +9,7 @@ const Sidebar = () => {
   const open = useSelector((state) => state.sidebar.open);
   const dispatch = useDispatch();
   const active =
-    "  bg-primary text-purple-500 px-4 py-2 rounded-sm border-l-4 border-purple-700";
+    "  bg-primary text-white px-4 py-2 rounded-sm border-l-4 border-purple-700";
   return (
     <div
       className={`${
@@ -23,7 +23,7 @@ const Sidebar = () => {
       <li
         onClick={() => navigate("/")}
         className={
-          "flex items-center gap-2 mx-2 md:mx-0 px-4 py-1 hover:cursor-pointer " +
+          "flex items-center gap-2 mx-2 md:mx-0 px-4 py-1 hover:cursor-pointer text-gray-600" +
           (location === "/" ? active : " ")
         }
       >
@@ -46,7 +46,7 @@ const Sidebar = () => {
       <li
         onClick={() => navigate("/explore")}
         className={
-          "flex items-center gap-2 mx-2 md:mx-0 px-4 py-1 cursor-pointer " +
+          "flex items-center gap-2 mx-2 md:mx-0 px-4 py-1 cursor-pointer  text-gray-600" +
           (location === "/explore" ? active : "")
         }
       >
@@ -71,7 +71,7 @@ const Sidebar = () => {
           navigate("/chat");
         }}
         className={
-          "flex items-center gap-2 mx-2 md:mx-0 px-4 py-1 cursor-pointer " +
+          "flex items-center gap-2 mx-2 md:mx-0 px-4 py-1 cursor-pointer  text-gray-600" +
           (location === "/chat" ? active : "")
         }
       >
@@ -99,7 +99,7 @@ const Sidebar = () => {
       <li
         onClick={() => navigate("/myqna")}
         className={
-          "flex items-center gap-2 mx-2 md:mx-0 px-4 py-1 cursor-pointer " +
+          "flex items-center gap-2 mx-2 md:mx-0 px-4 py-1 cursor-pointer  text-gray-600" +
           (location === "/myqna" ? active : "")
         }
       >
