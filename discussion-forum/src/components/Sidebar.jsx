@@ -9,7 +9,7 @@ const Sidebar = () => {
   const open = useSelector((state) => state.sidebar.open);
   const dispatch = useDispatch();
   const active =
-    "  bg-primary text-purple-500 px-4 py-2 rounded-sm border-l-4 border-purple-700";
+    "bg-primary text-white px-4 py-2 rounded-sm border-l-4 border-purple-700";
   return (
     <div
       className={`${
@@ -33,7 +33,10 @@ const Sidebar = () => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-4 h-4"
+          className={
+            " w-4 h-4 hover:cursor-pointer " +
+            (location === "/" ? active : " ")
+          }
         >
           <path
             strokeLinecap="round"

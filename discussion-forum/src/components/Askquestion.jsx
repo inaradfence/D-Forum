@@ -122,7 +122,7 @@ const Askquestion = () => {
             </label>
             <input
               name="title"
-              className="mt-2 w-full h-10 px-3 rounded outline-none border-none
+              className="mt-2 w-full h-10 px-3 text-black rounded outline-none border-none
                 shadow-sm"
               type="text"
             />
@@ -133,7 +133,7 @@ const Askquestion = () => {
             </label>
             <textarea
               name="description"
-              className="mt-2 w-full h-24 px-3 py-2 rounded outline-none border-none  shadow-sm"
+              className="mt-2 w-full h-24 text-black px-3 py-2 rounded outline-none border-none  shadow-sm"
               type="text"
             />
           </div>
@@ -144,7 +144,7 @@ const Askquestion = () => {
             <input
               name="tags"
               placeholder="Enter tags seperated by comma"
-              className="mt-2 w-full h-10 px-3 rounded outline-none border-none  shadow-sm"
+              className="mt-2 w-full h-10 px-3 text-black rounded outline-none border-none  shadow-sm"
               type="text"
             />
           </div>
